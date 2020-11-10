@@ -9,8 +9,22 @@
         android:id="@+id/home_dest"
         android:name="com.example.playground.HomeFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
 
+        <action
+            android:id="@+id/action_home_dest_to_wifiActivity"
+            app:destination="@id/wifiActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <activity
+        android:id="@+id/wifiActivity"
+        android:name="com.example.playground.wifi.WifiActivity"
+        android:label="activity_wifi"
+        tools:layout="@layout/activity_wifi" />
 
 
 </navigation>
