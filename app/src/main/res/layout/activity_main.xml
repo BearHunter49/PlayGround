@@ -15,7 +15,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        android:theme="@style/MyToolbar"
+        tools:title="Title"
+        tools:subtitle="hege"
         />
 
     <androidx.fragment.app.FragmentContainerView

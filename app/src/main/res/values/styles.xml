@@ -4,4 +4,12 @@
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
+
+    <style name="MyToolbar" parent="Theme.PlayGround">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorControlNormal">?attr/colorOnPrimarySurface</item>
+    </style>
+
 </resources>
