@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this, "Full screen: $isFull", Toast.LENGTH_SHORT).show()
 //        }
 
+
         Toast.makeText(this, "Your API is $sdkLevel", Toast.LENGTH_SHORT).show()
     }
 

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PlayGround</string>
     <string name="full_btn">Full</string>
+    <string name="toy_card_description">Toy Card</string>
 </resources>
