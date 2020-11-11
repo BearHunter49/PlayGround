@@ -20,16 +20,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar).apply {
+            title = getString(R.string.home_title)
+            subtitle = getString(R.string.home_subtitle)
+        }
         setSupportActionBar(toolbar)
-
-//        View.OnSystemUiVisibilityChangeListener {
-//            Toast.makeText(this, "Full screen: $isFull", Toast.LENGTH_SHORT).show()
-//        }
-
 
         Toast.makeText(this, "Your API is $sdkLevel", Toast.LENGTH_SHORT).show()
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.home_menu, menu)

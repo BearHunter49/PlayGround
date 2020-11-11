@@ -10,31 +10,45 @@ import androidx.navigation.fragment.findNavController
 import com.example.playground.data.ConstData
 import com.example.playground.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), HomeContract.HomeView {
     private lateinit var binding: FragmentHomeBinding
-    private lateinit var viewModel: HomeViewModel
+    private lateinit var presenter: HomeContract.HomePresenter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-        viewModel = HomeViewModel(ConstData)
-        binding.viewModel = viewModel
+        binding = FragmentHomeBinding.inflate(inflater)
+        presenter = HomePresenterImpl(this)
 
-        // Specify the current activity as the lifecycle owner.
-        binding.lifecycleOwner = this
-
+        presenter.initData()
+        
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = ToyAdapter(viewModel.toys, findNavController())
-        binding.toyList.adapter = adapter
+        setToyAdapter()
 
+//        val adapter = ToyAdapter(viewModel.toys, findNavController())
+//        binding.toyList.adapter = adapter
+    }
+
+    /**
+     * Adapter는 View와 Model 성격 모두 갖고 있다.
+     * View가 맡는것이 맞나?
+     */
+    override fun setToyAdapter() {
+        val adapter = ToyAdapter()
+
+        binding.toyList.adapter = adapter
+        presenter.setToyDataToAdapter(adapter)
+    }
+
+    override fun updateToyList(adapter: ToyAdapter) {
+        adapter.notifyDataSetChanged()
     }
 
 
