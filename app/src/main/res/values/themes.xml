@@ -5,7 +5,7 @@
         <item name="colorPrimary">#964eba</item>
         <item name="colorPrimaryDark">#651f89</item>
         <item name="colorPrimaryVariant">#c97ded</item>
-        <item name="colorOnPrimary">#651f89</item>
+        <item name="colorOnPrimary">#c97ded</item>
         <item name="colorOnPrimarySurface">#c97ded</item>
         <item name="colorAccent">#651f89</item>
 

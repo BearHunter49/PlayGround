@@ -4,4 +4,6 @@
     <string name="toy_card_description">Toy Card</string>
     <string name="home_title">PlayGround</string>
     <string name="home_subtitle">BearHunter49</string>
+    <string name="wifi_textinput_hint">Write your message.</string>
+    <string name="wifi_button">전송</string>
 </resources>
