@@ -19,6 +19,7 @@
         android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardElevation="@dimen/card_elevation"
         android:onClick="@{view -> NavigationUtilsKt.goNextDestination(view, dataToy.type)}">
 
         <LinearLayout

@@ -82,9 +82,10 @@ class MainActivity : AppCompatActivity() {
             window.insetsController?.show(WindowInsets.Type.systemBars())
         } else {
             // STABLE 플래그로 인해 다시 resize 되지 않음
-            window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+            // View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            // or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            // or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE)
         }
         isFull = false
     }

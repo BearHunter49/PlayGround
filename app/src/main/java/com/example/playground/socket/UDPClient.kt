@@ -48,7 +48,9 @@ class UDPClient : Client {
     }
 
     override fun closeSocket(){
-        server.socket.close()
+        if (this::server.isInitialized){
+            server.socket.close()
+        }
     }
 
     companion object{
