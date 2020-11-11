@@ -10,7 +10,7 @@ import com.google.android.material.card.MaterialCardView
  * Destination 종류
  */
 enum class Destinations{
-    WIFI
+    SOCKET
 }
 
 fun goNextDestination(view: View, type: Destinations){
@@ -19,6 +19,6 @@ fun goNextDestination(view: View, type: Destinations){
 
 fun findDestination(type: Destinations): Int{
     return when (type){
-        Destinations.WIFI -> { R.id.action_home_dest_to_wifiActivity }
+        Destinations.SOCKET -> { R.id.action_home_dest_to_socketActivity }
     }
 }

@@ -17,7 +17,8 @@
     </style>
 
     <style name="MyTextInput" parent="">
-        <item name="hintTextColor">@color/material_on_primary_emphasis_high_type</item>
+        <item name="boxBackgroundColor">@color/box_transparent</item>
+        <item name="hintTextColor">?attr/colorOnSecondary</item>
         <item name="android:textCursorDrawable">?attr/colorAccent</item>
         <item name="boxStrokeColor">?attr/colorSecondary</item>
     </style>

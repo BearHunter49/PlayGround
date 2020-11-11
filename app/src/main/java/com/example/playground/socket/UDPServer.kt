@@ -1,4 +1,4 @@
-package com.example.playground.wifi
+package com.example.playground.socket
 
 import java.net.DatagramSocket
 import java.net.InetAddress

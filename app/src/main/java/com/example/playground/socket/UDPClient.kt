@@ -1,20 +1,24 @@
-package com.example.playground.wifi
+package com.example.playground.socket
 
-import android.content.ContentValues.TAG
 import android.util.Log
-import android.view.View
 import java.io.IOException
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 
-class UDPClient(view: WifiActivity) : Client {
+class UDPClient : Client {
 
     private lateinit var server: UDPServer
+    private var ip: String = ""
+    private var port: Int = 0
 
-    override fun setServerInfo(address: String, port: Int) {
-        val ipAddr = InetAddress.getByName(address)
-        server = UDPServer(ipAddr, port, DatagramSocket())
+    override fun setServerInfo(ip: String, port: Int) {
+        // check duplicate
+        if (this.ip != ip) this.ip = ip
+        if (this.port != port) this.port = port
+
+        val ipAddress = InetAddress.getByName(this.ip)
+        server = UDPServer(ipAddress, this.port, DatagramSocket())
     }
 
     override fun sendMessage(data: String) {
@@ -35,7 +39,7 @@ class UDPClient(view: WifiActivity) : Client {
 
         try {
             ds.receive(dp)
-            result = String(receivedMsg, 0, dp.length)
+            result = String(receivedMsg, 0, dp.length) + ", ${dp.address}, ${dp.port}"
         }catch (e: IOException){
             Log.e(UDP_TAG, "receiveMessage Error!")
         }

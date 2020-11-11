@@ -12,8 +12,8 @@
         tools:layout="@layout/fragment_home" >
 
         <action
-            android:id="@+id/action_home_dest_to_wifiActivity"
-            app:destination="@id/wifiActivity"
+            android:id="@+id/action_home_dest_to_socketActivity"
+            app:destination="@id/socketActivity"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -21,10 +21,10 @@
     </fragment>
 
     <activity
-        android:id="@+id/wifiActivity"
-        android:name="com.example.playground.wifi.WifiActivity"
-        android:label="activity_wifi"
-        tools:layout="@layout/activity_wifi" />
+        android:id="@+id/socketActivity"
+        android:name="com.example.playground.socket.SocketActivity"
+        android:label="activity_socket"
+        tools:layout="@layout/activity_socket" />
 
 
 </navigation>

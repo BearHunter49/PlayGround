@@ -5,7 +5,7 @@ import com.example.playground.utils.Destinations
 
 object ConstData {
     val toyListDummyData = listOf<Toy>(
-        Toy("WiFi", R.drawable.ic_wifi_black_24dp, Destinations.WIFI)
+        Toy("Socket", R.drawable.ic_local_shipping_black_24dp, Destinations.SOCKET)
     )
 
 }

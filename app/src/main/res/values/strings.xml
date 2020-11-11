@@ -4,6 +4,8 @@
     <string name="toy_card_description">Toy Card</string>
     <string name="home_title">PlayGround</string>
     <string name="home_subtitle">BearHunter49</string>
-    <string name="wifi_textinput_hint">Write your message.</string>
-    <string name="wifi_button">전송</string>
+    <string name="socket_textinput_hint">Write your message.</string>
+    <string name="socket_ip_hint">Write host ip.</string>
+    <string name="socket_port_hint">Write host port.</string>
+    <string name="send_button">전송</string>
 </resources>

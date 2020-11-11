@@ -1,4 +1,4 @@
-package com.example.playground.wifi
+package com.example.playground.socket
 
 interface Client {
     fun setServerInfo(ip: String, port: Int)
