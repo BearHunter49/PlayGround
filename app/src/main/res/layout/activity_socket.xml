@@ -12,6 +12,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/input_layout2"
+        app:boxStrokeColor="?attr/colorSecondary"
         style="@style/MyTextInput"
         android:layout_marginStart="@dimen/textInput_margin"
         android:layout_marginEnd="@dimen/textInput_margin"
@@ -44,7 +45,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_text_port"
-            android:hint="@string/socket_ip_hint"
+            android:hint="@string/socket_port_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"

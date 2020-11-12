@@ -20,10 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar).apply {
-            title = getString(R.string.home_title)
-            subtitle = getString(R.string.home_subtitle)
-        }
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         Toast.makeText(this, "Your API is $sdkLevel", Toast.LENGTH_SHORT).show()

@@ -2,13 +2,21 @@
     <!-- Base application theme. -->
     <style name="Theme.PlayGround" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">#651f89</item>
+        <item name="colorPrimaryVariant">#964eba</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="background">@color/dark_surface</item>
+
+        <item name="colorOnPrimary">#000000</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">#5074ba</item>
+        <item name="colorSecondaryVariant">#83a2ed</item>
+        <item name="colorOnSecondary">#000000</item>
+        <!-- Secondary brand color. -->
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
