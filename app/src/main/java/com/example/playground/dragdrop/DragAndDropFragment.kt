@@ -27,6 +27,7 @@ class DragAndDropFragment : Fragment() {
     private lateinit var area2: LinearLayout
     private lateinit var area3: LinearLayout
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,9 +46,16 @@ class DragAndDropFragment : Fragment() {
             val dragData = ClipData(it.tag as CharSequence, arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN), item)
 
             it.startDragAndDrop(dragData, View.DragShadowBuilder(it), it, 0)
-
             true
         }
+
+        // Single Touch
+//        testButton.setOnTouchListener { v, event ->
+//            val item = ClipData.Item("드래그앤드롭")
+//            val dragData = ClipData(v.tag as CharSequence, arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN), item)
+//
+//            v.startDragAndDrop(dragData, View.DragShadowBuilder(v), v, 0)
+//        }
 
         return binding.root
     }
