@@ -8,4 +8,7 @@
     <string name="socket_ip_hint">Write host ip.</string>
     <string name="socket_port_hint">Write host port.</string>
     <string name="send_button">전송</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test_button">버튼</string>
 </resources>

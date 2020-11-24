@@ -18,6 +18,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_home_dest_to_dragAndDropFragment"
+            app:destination="@id/dragAndDropFragment" />
     </fragment>
 
     <activity
@@ -25,6 +28,12 @@
         android:name="com.example.playground.socket.SocketActivity"
         android:label="activity_socket"
         tools:layout="@layout/activity_socket" />
+
+    <fragment
+        android:id="@+id/dragAndDropFragment"
+        android:name="com.example.playground.dragdrop.DragAndDropFragment"
+        android:label="DragAndDropFragment"
+        tools:layout="@layout/fragment_drag_and_drop"/>
 
 
 </navigation>
