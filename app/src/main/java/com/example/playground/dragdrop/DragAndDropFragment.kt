@@ -19,6 +19,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.playground.R
 import com.example.playground.databinding.FragmentDragAndDropBinding
 import com.google.android.material.button.MaterialButton
+import timber.log.Timber
 
 class DragAndDropFragment : Fragment() {
     private lateinit var binding: FragmentDragAndDropBinding
@@ -45,6 +46,7 @@ class DragAndDropFragment : Fragment() {
             val item = ClipData.Item("드래그앤드롭")
             val dragData = ClipData(it.tag as CharSequence, arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN), item)
 
+            
             it.startDragAndDrop(dragData, View.DragShadowBuilder(it), it, 0)
             true
         }
@@ -69,37 +71,37 @@ class DragAndDropFragment : Fragment() {
         val dragListener = View.OnDragListener { v, event ->
             when(event.action){
                 DragEvent.ACTION_DRAG_STARTED -> {
-                    Log.d(TAG, "Drag Started")
+                    Timber.d("Drag Started")
                     if (event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
                         v.background = canBeDroppedShape
                         v.invalidate()
 
                         true
-                    }else{
+                    } else {
                         // Can not be dropped place.
                         false
                     }
                 }
                 DragEvent.ACTION_DRAG_ENTERED -> {
-                    Log.d(TAG, "Drag Entered")
+                    Timber.d("Drag Entered")
                     v.background = nowOnShape
                     v.invalidate()
 
                     true
                 }
                 DragEvent.ACTION_DRAG_LOCATION -> {
-                    Log.d(TAG, "Drag Location: ${event.x}, ${event.y}")
+                    Timber.d("Drag Location: ${event.x}, ${event.y}")
                     true
                 }
                 DragEvent.ACTION_DRAG_EXITED -> {
-                    Log.d(TAG, "Drag Exited")
+                    Timber.d("Drag Exited")
                     v.background = canBeDroppedShape
                     v.invalidate()
 
                     true
                 }
                 DragEvent.ACTION_DROP -> {
-                    Log.d(TAG, "Drag Drop")
+                    Timber.d("Drag Drop")
 
                     if (v == view.findViewById(R.id.linear_layout3)){
                         val item = event.clipData.getItemAt(0)
@@ -128,19 +130,19 @@ class DragAndDropFragment : Fragment() {
                     }
                 }
                 DragEvent.ACTION_DRAG_ENDED -> {
-                    Log.d(TAG, "Drag Ended")
+                    Timber.d("Drag Ended")
                     v.background = normalShape
                     v.invalidate()
 
                     when (event.result) {
-                        true -> Log.d(TAG, "${v.tag}: drop was handled.")
-                        else -> Log.d(TAG, "${v.tag}: drop wasn't handled.")
+                        true -> Timber.d("${v.tag}: drop was handled.")
+                        else -> Timber.d("${v.tag}: drop wasn't handled.")
                     }
 
                     true
                 }
                 else -> {
-                    Log.e(TAG, "Unknown action in OnDragListener")
+                    Timber.e("Unknown action in OnDragListener")
                     false
                 }
             }

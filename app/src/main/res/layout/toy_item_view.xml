@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <import type="androidx.navigation.Navigation" />
         <import type="com.example.playground.utils.NavigationUtilsKt" />
         <variable
@@ -34,6 +33,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/toy_card_description"
+                    android:tint="@color/black"
                     app:imgRes="@{dataToy.image}" />
 
                 <LinearLayout

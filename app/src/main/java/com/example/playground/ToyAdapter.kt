@@ -38,6 +38,7 @@ class ToyAdapter : RecyclerView.Adapter<ToyItemViewHolder>() {
 
 class ToyItemViewHolder(private val binding: ToyItemViewBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(toy: Toy){
-        binding.setVariable(BR.dataToy, toy)
+//        binding.setVariable(BR.dataToy, toy)
+        binding.dataToy = toy
     }
 }

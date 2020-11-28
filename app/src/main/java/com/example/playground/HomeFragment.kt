@@ -29,11 +29,7 @@ class HomeFragment : Fragment(), HomeContract.HomeView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setToyAdapter()
-
-//        val adapter = ToyAdapter(viewModel.toys, findNavController())
-//        binding.toyList.adapter = adapter
     }
 
     /**
