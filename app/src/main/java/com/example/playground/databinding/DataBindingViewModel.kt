@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DataBindingViewModel {
+class DataBindingViewModel : ViewModel() {
 //    var inputText = ObservableField("")
     private val _inputText = MutableLiveData<String>()
     val inputText: LiveData<String> = _inputText

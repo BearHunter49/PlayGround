@@ -27,7 +27,7 @@
             app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_home_dest_to_dataBindingFragment"
-            app:destination="@id/dataBindingFragment" />
+            app:destination="@id/nav_databinding" />
     </fragment>
 
     <activity
@@ -41,11 +41,23 @@
         android:name="com.example.playground.dragdrop.DragAndDropFragment"
         android:label="DragAndDropFragment"
         tools:layout="@layout/fragment_drag_and_drop"/>
-    <fragment
-        android:id="@+id/dataBindingFragment"
-        android:name="com.example.playground.databinding.DataBindingFragment"
-        android:label="fragment_data_binding"
-        tools:layout="@layout/fragment_data_binding" />
+    <navigation android:id="@+id/nav_databinding"
+        app:startDestination="@id/dataBindingFragment">
+        <fragment
+            android:id="@+id/dataBindingFragment"
+            android:name="com.example.playground.databinding.DataBindingFragment"
+            android:label="fragment_data_binding"
+            tools:layout="@layout/fragment_data_binding">
+            <action
+                android:id="@+id/action_dataBindingFragment_to_dataBinding2Fragment"
+                app:destination="@id/dataBinding2Fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/dataBinding2Fragment"
+            android:name="com.example.playground.databinding.DataBinding2Fragment"
+            android:label="fragment_data_binding2"
+            tools:layout="@layout/fragment_data_binding2" />
+    </navigation>
 
 
 </navigation>
